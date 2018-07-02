@@ -1,0 +1,26 @@
+server:
+  port: 8771
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: server-config
+  cloud:
+    config:
+      enabled: true
+      discovery:
+        enabled: true
+      server:
+        git:
+          uri: https://github.com/xiaoming302/cloud_properties
+          searchPaths: '{application}'
+          label: master
+
+
+#debug: true

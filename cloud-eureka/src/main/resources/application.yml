@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: cloud-eureka
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaulZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    healthcheck:
+      enabled: true
+  server:
+    eviction-interval-timer-in-ms: 60000
+    enable-self-preservation: false
+
+security:
+  basic:
+    enabled: false
+  user:
+      name: eureka # login username
+      password: eureka

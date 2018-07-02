@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-console-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockerfile/Elasticsearch/data/nodes/0/_state/global-13.st" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dockerfile/Elasticsearch/data/nodes/0/_state/node-1.st" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/server-stocks" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-user" charset="UTF-8" />
+  </component>
+</project>

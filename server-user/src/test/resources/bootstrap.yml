@@ -1,0 +1,54 @@
+server:
+  port: 8781
+
+spring:
+  application:
+    name: app-server-user
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: server-config
+      profile: test
+      label: master
+  zipkin:
+    base-url: http://server-zipkin/
+  sleuth:
+    sampler:
+      percentage: 1
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/sys_user?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: root
+      initial-size: 5
+      max-active: 20
+      min-idle: 10
+      max-wait: 10
+      filters: stat,wall
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 2000
+      web-stat-filter:
+        enabled: false
+        url-pattern: /*
+        exclusions: '*.gif,*.png,*.jpg,*.html,*.js,*.css,*.ico,/druid/*'
+      stat-view-servlet:
+        enabled: false
+        url-pattern: /druid/*
+        reset-enable: true
+        login-username: druid
+        login-password: druid
+        allow:
+        deny:
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+#debug: true
+

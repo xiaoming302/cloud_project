@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-console-web" />
+        <module name="cloud-config" />
+        <module name="cloud-eureka" />
+        <module name="server-stocks" />
+        <module name="server-user" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="appconsoleweb" target="1.8" />
+      <module name="cloud-zipkin" target="1.8" />
+      <module name="server-zipkin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
