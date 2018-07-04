@@ -33,7 +33,7 @@
 
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
 
-        <!--<logback.version>5.0</logback.version>-->
+        <logback-encoder.version>4.11</logback-encoder.version>
         <fastjson.version>1.2.38</fastjson.version>
         <druid.version>1.1.4</druid.version>
 
@@ -53,11 +53,12 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--<dependency>-->
-                <!--<groupId>net.logstash.logback</groupId>-->
-                <!--<artifactId>logstash-logback-encoder</artifactId>-->
-                <!--<version>${logback.version}</version>-->
-            <!--</dependency>-->
+            <!-- logback 对接logstash进行日志推送 -->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logback-encoder.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -65,11 +66,14 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
+            <!-- druid 数据库连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
             </dependency>
+
+            <!-- swagger2 API文档生成 -->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -94,7 +98,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- Docker maven plugin -->
+            <!-- docker镜像生成 -->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
@@ -112,6 +116,7 @@
                     </resources>
                 </configuration>
             </plugin>
+            <!-- 离线API文档生成 -->
             <plugin>
                 <groupId>org.asciidoctor</groupId>
                 <artifactId>asciidoctor-maven-plugin</artifactId>

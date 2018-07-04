@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/server-stocks/pom.xml" />
         <option value="$PROJECT_DIR$/app-console-web/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-admin/pom.xml" />
       </list>
     </option>
   </component>

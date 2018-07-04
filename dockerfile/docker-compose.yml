@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   elasticsearch:
     image:  elasticsearch:latest
@@ -10,7 +10,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
-       - ./data:/usr/share/elasticsearch/data
+       - ./elasticsearch/data:/usr/share/elasticsearch/data
 
   logstash:
     image: logstash:latest
@@ -34,6 +34,21 @@ services:
        - elk
     ports:
        - "5601:5601"
+    depends_on:
+       - elasticsearch
+
+
+  zipkin:
+    image: zipkin:latest
+    container_name: zipkin
+    restart: always
+    networks:
+      - elk
+    ports:
+      - "9411:9411"
+    environment:
+      - STORAGE_TYPE=elasticsearch
+      - ES_HOSTS=elasticsearch
     depends_on:
        - elasticsearch
 

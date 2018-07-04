@@ -1,0 +1,29 @@
+version: "3"
+services:
+
+  elasticsearch:
+    image:  elasticsearch:latest
+    container_name: elasticsearch
+    restart: always
+    networks:
+      - elk
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+       - ../elk/data:/usr/share/elasticsearch/data
+
+  zipkin:
+    image: zipkin:latest
+    container_name: zipkin
+    restart: always
+    networks:
+      - elk
+    ports:
+      - "9411:9411"
+    environment:
+      - STORAGE_TYPE=elasticsearch
+      - ES_HOSTS=elasticsearch
+
+networks:
+    elk:

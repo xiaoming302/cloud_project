@@ -116,7 +116,7 @@
         <!-- encoder必须配置,有多种可选 -->
         <encoder charset="UTF-8" class="net.logstash.logback.encoder.LogstashEncoder" >
             <!-- "appname":"yang_test" 的作用是指定创建索引的名字时用，并且在生成的文档中会多了这个字段  -->
-            <customFields>{"appname":"server-user"}</customFields>
+            <customFields>{"appname":"app-console-web"}</customFields>
         </encoder>
     </appender>
 

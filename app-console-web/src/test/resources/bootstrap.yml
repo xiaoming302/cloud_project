@@ -10,7 +10,7 @@ spring:
 #        enabled: true
 #        service-id: server-config
       uri: http://localhost:8771/ #由于config部署在docker中，故先直接写死IP，后续部署上docker是再使用集群配置项
-      profile: dev
+      profile: test
       label: master
   zipkin:
     base-url: http://server-zipkin/

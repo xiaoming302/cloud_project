@@ -10,7 +10,7 @@ eureka:
 
 spring:
   application:
-    name: server-config
+    name: cloud-config
   cloud:
     config:
       enabled: true
@@ -22,5 +22,15 @@ spring:
           searchPaths: '{application}'
           label: master
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 
+info:
+  version:
 #debug: true
