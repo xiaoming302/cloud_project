@@ -11,6 +11,8 @@ eureka:
 spring:
   application:
     name: cloud-config
+#  profiles:
+#    active: subversion #使用SVN作为配置中心时使用
   cloud:
     config:
       enabled: true
@@ -21,6 +23,12 @@ spring:
           uri: https://github.com/xiaoming302/cloud_properties
           searchPaths: '{application}'
           label: master
+#        svn:
+#          uri: svn://localhost/demo/spring_cloud/parent/trunk/properties/
+#          username: luoming
+#          password: L_ming_svn
+#          search-paths: '{application}'
+#          default-label: trunk
 
 management:
   endpoints:

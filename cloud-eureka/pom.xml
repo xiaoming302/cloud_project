@@ -10,7 +10,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <name>cloud-eureka</name>
-    <description>L.ing cloud project eureka server module.</description>
+    <description>系统注册与发现服务</description>
 
     <parent>
         <artifactId>cloud-parent</artifactId>

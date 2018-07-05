@@ -10,7 +10,7 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <name>cloud-admin</name>
-    <description>L.ing cloud project admin server module.</description>
+    <description>系统状态监控服务</description>
 
     <parent>
         <artifactId>cloud-parent</artifactId>
@@ -37,10 +37,23 @@
             <artifactId>spring-boot-admin-starter-server</artifactId>
             <version>2.0.1</version>
         </dependency>
+
+        <!-- JMX -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!-- 云应用断路器远程监控 -->
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server-ui</artifactId>
-            <version>2.0.1</version>
+            <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
+            <version>1.5.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jolokia</groupId>
+            <artifactId>jolokia-core</artifactId>
         </dependency>
 
 
