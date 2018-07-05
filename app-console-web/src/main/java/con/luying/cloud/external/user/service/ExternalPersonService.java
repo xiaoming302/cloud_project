@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @creater 2018/6/27 下午3:24
  * @modified
  */
-@FeignClient(value = "app-server-user", url = "http://localhost:8781", fallback = ExternalPersonServiceFallback.class)
+@FeignClient(value = "server-user", url = "http://localhost:8781", fallback = ExternalPersonServiceFallback.class)
 public interface ExternalPersonService {
 
     /**
