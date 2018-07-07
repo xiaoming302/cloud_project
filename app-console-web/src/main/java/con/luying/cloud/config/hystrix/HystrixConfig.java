@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author luoming
  * @version V1.0
- * @description
+ * @description Hystrix对Hystrix dashboard的支持（2.0以上版本需要添加此配置）
  * @creater 2018/7/5 下午4:14
  * @modified
  */
 @Configuration
-public class HystrixDashboardConfig {
+public class HystrixConfig {
 
     @Bean
     public HystrixMetricsStreamServlet hystrixMetricsStreamServlet(){

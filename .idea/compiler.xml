@@ -10,6 +10,7 @@
         <module name="cloud-admin" />
         <module name="cloud-config" />
         <module name="cloud-eureka" />
+        <module name="cloud-hystrix-dashboard" />
         <module name="cloud-zuul" />
         <module name="server-stocks" />
         <module name="server-user" />

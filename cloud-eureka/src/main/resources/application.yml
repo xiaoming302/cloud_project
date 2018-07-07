@@ -18,10 +18,3 @@ eureka:
   server:
     eviction-interval-timer-in-ms: 60000
     enable-self-preservation: false
-
-security:
-  basic:
-    enabled: false
-  user:
-      name: eureka # login username
-      password: eureka
